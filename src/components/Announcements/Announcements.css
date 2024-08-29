@@ -1,0 +1,91 @@
+.announcementsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  height: 50vh;
+  flex-direction: column-reverse;
+}
+.announcements {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("../../assets/church2.jpg") fixed center center;
+  background-size: cover;
+  padding: 50px 10px;
+  margin-block: 40px;
+  color: white;
+}
+.announcement-container {
+  width: 60vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 16px;
+}
+.announcement-list {
+  width: 100%;
+  display: flex;
+  animation: slide 30s linear infinite;
+}
+.announcement {
+  width: 100%;
+  flex-shrink: 0;
+  font-size: 40px;
+  background-color: none;
+  color: goldenrod;
+  padding: 30px 50px;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  96% {
+    transform: translateX(-240%);
+  }
+  97% {
+    transform: translateX(-180%);
+  }
+  98% {
+    transform: translateX(-120%);
+  }
+  99% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.announcement p {
+  line-height: 1.8;
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  .announcement-container{
+    width: 90vw;
+  }
+  .announcement{
+    padding: 5px 10px;
+  }
+}

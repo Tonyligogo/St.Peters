@@ -1,0 +1,45 @@
+.sermons {
+  margin-block: 40px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("../../assets/pexels-pixabay-372326.jpg") fixed center center;
+  background-size: cover;
+  padding: 5rem;
+  color: white;
+}
+
+.sermonsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  place-content: center;
+}
+.sermonsBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-inline: auto;
+  font-size: 18px;
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.sermonsBtn:hover {
+  padding-inline: 30px;
+}
+
+@media screen and (max-width:1020px) {
+  .sermonsWrapper{
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width:720px) {
+  .sermonsWrapper{
+    grid-template-columns: 350px;
+    gap: 2rem;
+  }
+}

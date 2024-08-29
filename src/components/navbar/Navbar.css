@@ -1,0 +1,231 @@
+.navContainer {
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding-block: 2px;
+}
+.active {
+  padding-block: 12px;
+  height:90px;
+  background-color: white;
+  transition: all 800ms ease;
+  color: black;
+  box-shadow: 0px 3px 5px 0px rgba(149, 149, 149, 0.75);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(149, 149, 149, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(149, 149, 149, 0.75);
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.link h3 {
+  font-size: 1.5rem;
+}
+nav {
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: bold;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navLinks li {
+  text-decoration: none;
+  list-style: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.navLinks li:hover {
+  background-color: rgba(238, 242, 246, 0.3);
+}
+nav h3 {
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+  object-position: center;
+}
+.logoName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 3px;
+}
+.logoName h3{
+ white-space: nowrap;
+}
+.ministries {
+  position: relative;
+}
+.ministries .ministriesWrapper {
+  display: none;
+}
+.ministries.selected .ministriesWrapper {
+  display: block;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: max-content;
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  z-index: 99;
+  color: black;
+}
+.ministries:hover .ministriesWrapper {
+  display: block;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: max-content;
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  z-index: 99;
+  color: black;
+}
+.ministries .ministriesWrapper li {
+  line-height: 1.8;
+  position: relative;
+}
+
+.about {
+  position: relative;
+}
+.about .aboutWrapper {
+  display: none;
+}
+.about.selected .aboutWrapper {
+  display: block;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: max-content;
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  z-index: 99;
+  color: black;
+}
+.about:hover .aboutWrapper {
+  display: block;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: max-content;
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  z-index: 99;
+  color: black;
+}
+.about .aboutWrapper li {
+  line-height: 1.8;
+  position: relative;
+}
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+.ministries .ministriesWrapper li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffd615;
+  transition: all 300ms ease-in-out;
+}
+.ministries .ministriesWrapper li:hover::before {
+  width: 100%;
+}
+.ministries .ministriesWrapper li:hover {
+  cursor: pointer;
+}
+.ministries .ministriesWrapper::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+}
+
+.about .aboutWrapper li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffd615;
+  transition: all 300ms ease-in-out;
+}
+.about .aboutWrapper li:hover::before {
+  width: 100%;
+}
+.about .aboutWrapper li:hover {
+  cursor: pointer;
+}
+.about .aboutWrapper::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+}
+.menu{
+  display: none;
+}
+.aside{
+  background-color: white;
+  color: black;
+  transform: translateX(100%);
+  transition: all 500ms ease-in-out;
+  z-index: 100;
+  height: calc(100vh - 70px);
+}
+.aside ul{
+  margin: 0;
+  padding: 10px;
+}
+.aside ul li{
+  padding: 5px;
+}
+.aside.active{
+  transform: translateX(60%);
+}
+
+@media screen and (max-width: 980px) {
+  .links{
+    display:none;
+  }
+  .menu{
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .logoName h3{display: none;}
+}

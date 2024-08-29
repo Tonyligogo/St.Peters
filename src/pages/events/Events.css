@@ -1,0 +1,116 @@
+.eventsBackground {
+    background-image: url("../../assets/bg_1.jpg.webp");
+    height: 100dvh;
+    width: 100%;
+    position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  .eventsOverlay {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.4;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .eventsBreadCrumbsWrapper{
+      position: absolute;
+      z-index: 99;
+      bottom: 2rem;
+      padding-inline: 6rem;
+  }
+  .eventsContent{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .eventsContent h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .eventsContent p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+  }
+  .eventsBreadCrumbsWrapper h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+  }
+  .eventsBreadCrumbs {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .eventsBreadCrumbs span{
+      display: inline-flex;
+      align-items: center;
+  }
+  .eventsBreadCrumbs span a{
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+  }
+  .actualEvents{
+      background-color: white;
+      padding: 100px 50px;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .singleEvent img{
+    height: 250px;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .singleEvent .singleEventContent{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 1rem;
+  }
+  .singleEvent .singleEventContent span{
+    font-size: 17px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #656565;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .singleEvent .singleEventContent span:first-child{
+    color: black;
+  }
+  @media screen and (max-width: 1060px){
+    .actualEvents{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem 1.5rem;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .actualEvents{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+  }
+  

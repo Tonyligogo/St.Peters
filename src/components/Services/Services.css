@@ -1,0 +1,58 @@
+.container {
+  margin-block: 40px;
+}
+.servicePic {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.servicesWrapper {
+  margin-inline: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+.servicesWrapper .card {
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 10px;
+  padding: 0;
+}
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.serviceContent .title{
+ font-weight: 600;
+ font-size: 18px;
+ margin-block: 8px;
+}
+.serviceContent .time{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.serviceContent .time small{
+ color: grey;
+}
+ @media screen and (max-width: 1024px) {
+  .servicesWrapper {
+     grid-template-columns: repeat(2, 1fr);
+   }
+   .servicePic{
+    height:300px
+   }
+}
+ @media screen and (max-width: 576px) {
+  .servicesWrapper {
+     grid-template-columns: 1fr;
+   }
+   .servicePic{
+    height:250px
+   }
+}
