@@ -71,10 +71,11 @@
     gap: 2rem;
     margin: 3rem 2rem;
 }
-.row2 p{
+.row2 .row2Text{
     flex: 1;
     font-size: 20px;
     line-height: 1.6;
+    margin-top: 1rem;
 }
 .row2 div{
     flex: 1;
@@ -140,6 +141,9 @@
 }
 
 @media screen and (max-width: 576px){
+    .row2{
+        align-items: flex-start;
+    }
     .row3{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 200px);

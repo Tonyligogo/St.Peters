@@ -46,8 +46,12 @@ function Children() {
           <img src="https://i.pinimg.com/originals/00/82/1e/00821e92f02ac1b3a7527601a6ff9dab.jpg" alt="sunday school" />
       </div>
       <div className="row2">
-        <p>At St.Peters, our Children&apos;s Ministry is dedicated to nurturing the spiritual growth of children from infancy through elementary school. <br />
+        <div>
+        <h2>About Children&apos;s Ministry</h2>
+        <p className="row2Text">At St.Peters, our Children&apos;s Ministry is dedicated to nurturing the spiritual growth of children from infancy through elementary school. </p>
+        <p className="row2Text">
         We believe that every child is a precious gift from God, and we strive to create a loving and supportive environment where they can learn about Jesus and develop a personal relationship with Him.</p>
+        </div>
         <div>
         <h2>What we do in Children&apos;s Ministry?</h2>
         <ul style={{padding:'0'}}>

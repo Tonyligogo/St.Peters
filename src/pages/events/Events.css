@@ -107,10 +107,17 @@
     }
   }
   @media screen and (max-width: 768px){
+    .eventsBreadCrumbsWrapper{
+      padding-inline: 4rem;
+    }
     .actualEvents{
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
   }
-  
+  @media screen and (max-width: 576px) {
+    .eventsBreadCrumbsWrapper{
+      padding-inline: 1rem;
+    }
+  }

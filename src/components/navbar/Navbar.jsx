@@ -22,6 +22,7 @@ function Navbar() {
   }, []);
 
   return (
+    <div className="overalContainer">
     <div className={active ? "navContainer active" : "navContainer"}>
       <nav>
         <Link to="/" className="link">
@@ -30,12 +31,10 @@ function Navbar() {
             <h3> ACK St.Peter&apos;s Embakasi</h3>
           </div>
         </Link>
-        <div className='menu' onClick={()=>setMenuActive((prev)=>!prev)}>
-            {!menuActive ? 
-            <IoMenu style={{fontSize:'26px'}}/>
-            :
-            <IoClose style={{fontSize:'26px'}}/>
-            }
+        <div className="menu" onClick={() => setMenuActive((prev) => !prev)}>
+          {!menuActive &&
+            <IoMenu style={{ fontSize: "26px" }} />
+          }
         </div>
         <div className="links">
           <ul className="navLinks">
@@ -72,9 +71,7 @@ function Navbar() {
                 <li>
                   <Link to="/ministries/MothersUnion">Mother's Union</Link>
                 </li>
-
                 <li>
-                  {" "}
                   <Link to="/ministries/youth-ministry">Youth Ministry</Link>
                 </li>
                 <li>
@@ -91,16 +88,55 @@ function Navbar() {
             <li>
               <Link to="/events">Events</Link>
             </li>
-            <li> <a href="mailto:info@ackstpetersembakasi.org" title="Schedule appointment">Appointments</a> </li>
+            <li>
+              {" "}
+              <a
+                href="mailto:info@ackstpetersembakasi.org"
+                title="Schedule appointment"
+              >
+                Appointments
+              </a>{" "}
+            </li>
           </ul>
         </div>
       </nav>
-      <aside className={`aside ${menuActive ? 'active' : ''}`}>
+    </div>
+      <aside className={`aside ${menuActive ? "active" : ""}`}>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center',paddingInline:'1rem'}}>
+        <img src={Logo} className="logo" alt="church logo" />
+      <IoClose style={{ fontSize: "26px" }} onClick={() => setMenuActive(false)}/>
+        </div>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact Us</li>
-            <li>Get involved</li>
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/">Home</Link>
+          </li>
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/ministries/Kama">K.A.M.A.</Link>
+          </li>
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/ministries/MothersUnion">Mother's Union</Link>
+          </li>
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/ministries/youth-ministry">Youth Ministry</Link>
+          </li>
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/ministries/children-ministry">Sunday School</Link>
+          </li>
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/ministries/PraiseTeam">Praise & Worship team</Link>
+          </li>{" "}
+          <li onClick={() => setMenuActive(false)}>
+            <Link to="/events">Events</Link>
+          </li>
+          <li onClick={() => setMenuActive(false)}>
+            {" "}
+            <a
+              href="mailto:info@ackstpetersembakasi.org"
+              title="Schedule appointment"
+            >
+              Appointments
+            </a>{" "}
+          </li>
         </ul>
       </aside>
     </div>

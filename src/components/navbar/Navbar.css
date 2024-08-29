@@ -1,3 +1,6 @@
+.overalContainer{
+  position: relative;
+}
 .navContainer {
   background-color: transparent;
   color: white;
@@ -24,7 +27,7 @@
   font-size: 1.5rem;
 }
 nav {
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -200,22 +203,27 @@ li a {
   display: none;
 }
 .aside{
+  position: fixed;
+  top: -500px;
   background-color: white;
   color: black;
-  transform: translateX(100%);
   transition: all 500ms ease-in-out;
   z-index: 100;
-  height: calc(100vh - 70px);
+  width: 100vw;
+  height: fit-content;
 }
 .aside ul{
   margin: 0;
   padding: 10px;
 }
 .aside ul li{
-  padding: 5px;
+  padding: 10px 5px;
+}
+.aside ul li:hover{
+  color: goldenrod;
 }
 .aside.active{
-  transform: translateX(60%);
+  top: 0;
 }
 
 @media screen and (max-width: 980px) {

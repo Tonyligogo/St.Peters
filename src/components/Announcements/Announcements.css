@@ -77,15 +77,24 @@
     transform: translateX(0);
   }
 }
-.announcement p {
+.announcement p{
   line-height: 1.8;
   font-size: 20px;
+  color: white;
+}
+.announcement p.announcement-date{
+  font-size: 16px;
+  color: rgb(148, 148, 148);
 }
 @media screen and (max-width: 576px) {
+  .announcementsWrapper{
+    height: 30vh;
+  }
   .announcement-container{
-    width: 90vw;
+    width: 100vw;
   }
   .announcement{
     padding: 5px 10px;
+    font-size: 28px;
   }
 }
