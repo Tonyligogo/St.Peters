@@ -42,7 +42,7 @@ function Home() {
               <p className="Quote">
                 ❝ Doing the right thing, at the right place, and at the right
                 time ensures a future free from regrets. It's about more than
-                just making ethical choices — it's understanding how context and
+                just making ethical choices; it's understanding how context and
                 timing shape outcomes.❞
               </p>
             </div>

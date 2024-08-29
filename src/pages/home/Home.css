@@ -308,30 +308,6 @@ main {
   justify-content: center;
   margin-top: 10px;
 }
-@media screen and (max-width: 980px) {
-  .contact{
-    margin-inline: 3rem;
-    padding: 2rem 3rem;
-  }
-  .contact h1 {
-    font-size: 24px;
-  }
-  .contact p {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .contact{
-    margin-inline: 1rem;
-    padding: 0.4rem 1rem;
-  }
-  .contact h1 {
-    font-size: 24px;
-  }
-  .contact p {
-    font-size: 15px;
-  }
-}
 .animate {
   display: inline-block;
   opacity: 0;
@@ -350,6 +326,46 @@ main {
   opacity: 0;
   animation: slideIn 2.5s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+@media screen and (max-width: 980px) {
+  .contact{
+    margin-inline: 3rem;
+    padding: 2rem 3rem;
+  }
+  .contact h1 {
+    font-size: 24px;
+  }
+  .contact p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .background .content .themeText{
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+  }
+  .midSection{
+    height: 100%;
+  }
+  .midSectionContainer{
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    box-shadow: none;
+  }
+  .contact{
+    margin-inline: 1rem;
+    padding: 0.4rem 1rem;
+  }
+  .contact h1 {
+    font-size: 24px;
+  }
+  .contact p {
+    font-size: 15px;
+  }
+}
+
 @keyframes slideIn {
   0% {
     transform: translateX(-100%);
@@ -361,15 +377,12 @@ main {
   }
   20% {
     transform: translateX(-60%);
-    /* opacity: 1; */
   }
   30% {
     transform: translateX(-40%);
-    /* opacity: 1; */
   }
   40% {
     transform: translateX(-20%);
-    /* opacity: 1; */
   }
   50% {
     transform: translateX(10%);
