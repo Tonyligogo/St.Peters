@@ -61,7 +61,7 @@ function Footer() {
         <p className="footer">
           <span className="greyLine"></span>
           <small className="textPrimary">
-            Copyright &copy; 2024 All rights reserved
+            Copyright &copy; 2024. All rights reserved
           </small>
           <span className="greyLine"></span>
         </p>

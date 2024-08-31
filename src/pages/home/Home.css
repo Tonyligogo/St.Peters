@@ -108,13 +108,13 @@ main {
 /* mid section bg */
 .midSection {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   background-color: #f8f9fa;
 }
 .midSectionContainer {
   color: black;
   position: absolute;
-  top: -20%;
+  top: -8%;
   left: 50%;
   transform: translatex(-50%);
   width: 80%;
